@@ -1,0 +1,376 @@
+/* disable text selection for the entire page */
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the blue border on buttons */
+a:active, a:focus,input, input:active, input:focus, button:focus {     outline: 0;     outline-style:none;     outline-width:0; }  
+a:active, a:focus,button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner 
+{     border: none !important;
+      outline: 0 none !important;
+} 
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* links */
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+a:active, a:visited {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;    
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", "Calibri", "sans";
+    margin: 0 0 60px; /* must match footer height */
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 50px;
+}
+
+.smalltext {
+    font-size: 12px;
+    margin-left: 50px;
+    vertical-align: middle;
+}
+
+.songSelector {
+    float: right;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.songSelector label {
+    margin-right: 10px;
+}
+
+/* page footer */
+footer {
+    background: black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    height: 60px;
+    width: 100%;    
+    color: white;
+    font-size: 11px;
+}
+
+#container {
+    min-height: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* track information */
+div.trackinfo {
+    background: orange;
+    color: white;
+    font-size: 28px;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+input#trackname {
+    border:none;
+    font-size: 28px;
+    background: orange;
+    color: black;
+}
+
+#currentPos {
+    font-size: 12px;
+    color: black;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+/* track editor */
+div.trackeditor {
+    position: relative;
+    background: gray;
+    height: 100% !important;
+    min-height: 100% !important;
+    overflow: hidden;
+}
+
+/* sound selection control panel */
+div.soundselection {
+    background: black;
+    text-align: center;
+    height: 70px;
+    position: absolute;
+    left: 0px;
+    bottom: 120px;
+    width: 100%;
+}
+
+/* buttons */
+button.octave {
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;    
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+button.three {
+    background: orange;
+}
+button.four {
+    background: red;
+}
+button.five {
+    background: blue;
+}
+button.six {
+    background: green;
+}
+
+button.selectedOctaveButton {
+    border: 3px solid white;
+}
+
+/* button control panel */
+div.controlpanel {
+    background: #333;
+    text-align: center;
+    background: -webkit-gradient(linear,left 0,left 100%,from(#3c3c3c),to(#222));
+    background: -moz-linear-gradient(top,#3c3c3c,#222);
+    /* padding-left: 150px; */
+    position: absolute;
+    left: 0px;
+    bottom: 60px;
+    width: 100%;
+}
+
+/* buttons */
+button.control {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    text-indent: -9999px;
+}
+
+button.play {
+    background: url('../images/glyphicons/glyphicons_173_play.png') center no-repeat;
+    margin-left: 75px;
+}
+button.play:hover {
+    background: url('../images/glyphicons/glyphicons_173_play-b.png') center no-repeat;    
+}
+button.pause {
+    background: url('../images/glyphicons/glyphicons_174_pause.png') center no-repeat;
+    margin-left: 75px;
+}
+button.pause:hover {
+    background: url('../images/glyphicons/glyphicons_174_pause-b.png') center no-repeat;
+}
+button.stop {
+    background: url('../images/glyphicons/glyphicons_175_stop.png') center no-repeat;
+}
+button.stop:hover {
+    background: url('../images/glyphicons/glyphicons_175_stop-b.png') center no-repeat;
+}
+button.rewind {
+    background: url('../images/glyphicons/glyphicons_172_rewind.png') center no-repeat;
+}
+button.rewind:hover {
+    background: url('../images/glyphicons/glyphicons_172_rewind-b.png') center no-repeat;
+}
+button.repeat {
+    background: url('../images/glyphicons/glyphicons_080_retweet.png') center no-repeat;
+}
+button.repeat:hover {
+    background: url('../images/glyphicons/glyphicons_080_retweet-b.png') center no-repeat;
+}
+button.repeat.buttonselected {
+    background: url('../images/glyphicons/glyphicons_080_retweet-green.png') center no-repeat;
+}
+button.repeat.buttonselected:hover {
+    background: url('../images/glyphicons/glyphicons_080_retweet-b.png') center no-repeat;
+}
+button.recycle {
+    background: url('../images/glyphicons/glyphicons_016_bin.png') center no-repeat;
+    float: right;
+    margin-right: 25px;
+}
+button.recycle:hover {
+    background: url('../images/glyphicons/glyphicons_016_bin-b.png') center no-repeat;
+}
+
+button.spacer {
+    margin-right: 100px;
+}
+
+/* The track editor elements */
+
+/* play marker positions */
+ul.playmarkers {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+ul.playmarkers li {
+    height: 20px;
+    display: block;
+    width: 20px;    
+    float: left;
+    
+}
+
+li.startMarker {
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+
+li.endMarker {
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+
+li.inBetween {
+    height: 12px !important;
+    width: 12px !important;
+    background: gray;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: solid 2px black;
+    cursor: pointer;    
+}
+
+ul.tracklisting {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 25px;
+}
+
+ul.tracklisting li {
+    height: 80px;
+}
+
+div.track {
+    padding: 0px;
+    margin: 0px;
+    height: 80px;
+}
+
+div.track h4 {
+    color: white;
+    font-size: 10px;
+    position: relative;
+    top: 15px;
+    left: 2px;
+    height: 0px;    
+}
+
+ul.notes {
+    margin: 0px;
+    padding: 0px;
+    height: 70px;
+    width: 98%;
+}
+
+li.note {
+    display: block;
+    float: left;    
+    width: 20px;
+    height: 70px;
+    background: rgba(0,0,0,0);
+}
+
+li.none {
+    background: black;
+    top: 0px;
+}
+
+.note_a {
+    position: relative;
+    top: 10px;
+}
+.note_b {
+    position: relative;
+    top: 0px;
+}
+.note_c {
+    position: relative;
+    top: 60px;
+}
+.note_d {
+    position: relative;
+    top: 50px;
+}
+.note_e {
+    position: relative;
+    top: 40px;
+}
+.note_f {
+    position: relative;
+    top: 30px;
+}
+.note_g {
+    position: relative;
+    top: 20px;
+}
+
+.octave3 {
+    background: orange;
+}
+.octave4 {
+    background: red;
+}
+.octave5 {
+    background: blue;
+}
+.octave6 {
+    background: green;
+}
+
+div.circle {    
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;    
+}

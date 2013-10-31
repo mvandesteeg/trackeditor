@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="trackEditor">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5 Track editor using the WebAudio API</title>
+        <link rel="shortcut icon" href="images/favicon.ico"></link>
+                                
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="javascript/jq/songs.js"></script>
+        <script src="javascript/jq/Voice.js"></script>
+        <script src="javascript/jq/Track.js"></script>
+        <script src="javascript/jq/TrackPlayer.js"></script>                
+        
+        <!-- main script -->
+        <script src="javascript/jq/script.js"></script>
+        <!-- stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    </head>
+    <body>
+        <div id="container">
+            <header>HTML5 Track editor using the WebAudio API <span class="smalltext">Only works in latest Chrome, Firefox or Safari</span><span class="songSelector"><label for="exampleSongs">Select a song</label><select id="exampleSongs"></select></span></header>
+            <div class="trackinfo">
+                <input id="trackname" type="text" placeholder="New track"></input> <span id="currentPos">0/80</span>
+            </div>        
+            <div class="trackeditor">
+                <ul class="playmarkers"></ul>
+                <ul class="tracklisting"></ul>
+            </div>
+        </div>
+        <div class="soundselection">
+            <nav>
+                <!-- <button class="octave three" data-octave="3"></button> -->
+                <button class="octave four selectedOctaveButton" data-octave="4"></button>
+                <button class="octave five" data-octave="5"></button>
+                <button class="octave six" data-octave="6"></button>
+            </nav>
+        </div>
+        <div class="controlpanel">
+            <nav>                
+                <button class="control play" id="play">Play</button>
+                <button class="control pause" id="pause">Pause</button>                
+                <button class="control stop" id="stop">Stop</button>                
+                <button class="control rewind" id="rewind">Rewind</button>
+                <button class="control repeat" id="repeat">Repeat</button>
+                <button class="control recycle" id="recycle">Trash</button>
+            </nav>
+        </div>        
+        <footer>
+        <p>Author: Marcel van de Steeg<br/><br/><span>v0.1</span>
+        - Built using <a target="_blank" href="http://jquery.com/">jQuery</a>,                 
+        Media icons from <a target="_blank" href="http://glyphicons.com/" title="GLYPHICONS is a library of precisely prepared monochromatic icons and symbols, created with an emphasis on simplicity and easy orientation.">GLYPHICONS.com</a>
+        </p>
+        </footer>        
+    </body>
+</html>
